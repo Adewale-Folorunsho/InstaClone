@@ -41,7 +41,6 @@ public class LoginActivity extends AppCompatActivity {
                 String password = etPassword.getText().toString();
                 //move to a function that authenticates the user
                 loginUser(username, password);
-                //create an intent to move to the timeline activity
             }
         });
 
