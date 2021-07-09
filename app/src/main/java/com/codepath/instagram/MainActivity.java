@@ -151,9 +151,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "Post was successful");
                 etDescription.setText("");
                 ivPicture.setImageResource(0);
-
             }
         });
+
+        Intent intent = new Intent(MainActivity.this, TimelineActivity.class);
+        //Log.i(TAG, "intent was reached");
+        startActivity(intent);
+        finish();
     }
 
     private void queryPosts() {
