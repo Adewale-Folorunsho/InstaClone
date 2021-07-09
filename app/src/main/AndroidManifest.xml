@@ -26,8 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".PostActivity"></activity>
         <activity android:name=".TimelineActivity"></activity>
+        <activity android:name=".PostDetailsActivity"></activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"

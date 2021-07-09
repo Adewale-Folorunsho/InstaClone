@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
         if(ParseUser.getCurrentUser() != null){
-            goMainActivity();
+            goTimelineActivity();
         }
 
         etUsername = findViewById(R.id.etUsername);
@@ -56,15 +56,15 @@ public class LoginActivity extends AppCompatActivity {
                     Log.e(TAG, "Issue with Login");
                     return;
                 }
-                goMainActivity();
+                goTimelineActivity();
                 Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
             }
         });
 
     }
 
-    private void goMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+    private void goTimelineActivity() {
+        Intent intent = new Intent(this, TimelineActivity.class);
         startActivity(intent);
         finish();
     }
