@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText etUsername;
     EditText etPassword;
     Button btnLogin;
+    Button btnSignUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
+        btnSignUp = findViewById(R.id.btnSignUp);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +47,35 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i(TAG, "Sign up button was clicked");
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
+                //move to a function that authenticates the user
+                signUpUser(username, password);
+            }
+        });
 
+
+    }
+
+    private void signUpUser(String username, String password) {
+        ParseUser user = new ParseUser();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.signUpInBackground(new SignUpCallback() {
+            public void done(ParseException e) {
+                if (e == null) {
+                    goTimelineActivity();
+                    Toast.makeText(LoginActivity.this, "Signup Successful!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Log.e(TAG, "Issue with sign up");
+                    return;
+                }
+            }
+        });
     }
 
     private void loginUser(String username, String password) {

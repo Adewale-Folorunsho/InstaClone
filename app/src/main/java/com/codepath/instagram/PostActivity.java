@@ -180,17 +180,4 @@ public class PostActivity extends AppCompatActivity {
         });
 
     }
-
-    public void logout(View view) {
-        Log.d(TAG, "Logout");
-        finish();
-
-        ParseUser.logOut();
-        ParseUser currentUser = ParseUser.getCurrentUser();
-        Toast.makeText(PostActivity.this, "Logout Successful", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, LoginActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // this makes sure the Back button won't work
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // same as above
-        startActivity(intent);
-    }
 }

@@ -41,18 +41,27 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/tvCreatedAt"
-        android:layout_width="108dp"
-        android:layout_height="63dp"
-        android:layout_below="@+id/ivImage"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="265dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toEndOf="@+id/ivImage"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivImage"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="243dp"
+        android:layout_marginBottom="234dp"
         android:layout_toEndOf="@+id/tvDescription"
-        android:hint="Created At"
-        android:textStyle="italic" />
+        android:text="TextView" />
 
 </RelativeLayout>

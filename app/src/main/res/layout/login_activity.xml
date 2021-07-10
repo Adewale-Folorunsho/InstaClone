@@ -71,4 +71,13 @@
         android:layout_marginBottom="153dp"
         android:text="Login" />
 
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="133dp"
+        android:text="Sign Up" />
+
 </RelativeLayout>
