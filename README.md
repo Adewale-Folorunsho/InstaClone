@@ -1,6 +1,6 @@
-# Project 4 - Instagram
+# Project 4 - InstaClone
 
-Instagram is a photo sharing app using Parse as its backend.
+InstaClone is a photo sharing app using Parse as its backend.
 
 Time spent: 20 hours spent in total
 
@@ -13,16 +13,16 @@ The following **required** functionality is completed:
 - [x] User can log in to his or her account
 - [x] The current signed in user is persisted across app restarts
 - [x] User can log out of his or her account
-- [x] User can take a photo, add a caption, and post it to "Instagram"
-- [x] User can view the last 20 posts submitted to "Instagram"
-- [x] User can pull to refresh the last 20 posts submitted to "Instagram"
+- [x] User can take a photo, add a caption, and post it to "InstaClone"
+- [x] User can view the last 20 posts submitted to "InstaClone"
+- [x] User can pull to refresh the last 20 posts submitted to "InstaClone"
 - [x] User can tap a post to go to a Post Details activity, which includes timestamp and caption.
 - [x] User sees app icon in home screen
 
 The following **stretch** features are implemented:
 
-- [ ] Style the login page to look like the real Instagram login page.
-- [ ] Style the feed to look like the real Instagram feed.
+- [ ] Style the login page to look like the real InstaClone login page.
+- [ ] Style the feed to look like the real InstaClone feed.
 - [x] User can load more posts once he or she reaches the bottom of the feed using endless scrolling.
 - [ ] User should switch between different tabs using fragments and a Bottom Navigation View.
   - [ ] Feed Tab (to view all posts from all users)
